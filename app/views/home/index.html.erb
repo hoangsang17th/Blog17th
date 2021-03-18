@@ -25,7 +25,12 @@
 
 <section class="bg-light" id="blog">
     <div class="container">
+    <%# <%= @postz.Author %>
         <% @posts.each do |post| %>
+        <% 
+        # @id_user = User.find(@posts.Author)
+        %>
+        
             <div class="row text-center section">
                 <div class="col-12">
                     <div class="blog-title">
