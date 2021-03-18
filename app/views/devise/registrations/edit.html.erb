@@ -1,0 +1,75 @@
+<section class="bg-light pt-5">
+  <div class="home-center mt-3">
+      <div class="home-desc-center pt-5">
+          <div class="container">
+              <div class="row mb-5">
+                  <div class="col-lg-4 mt-2">
+                      <div class="boxed">
+                          <div class="text-title-boxed text-center">
+                              <p>Interact with Blog17th</p>
+                          </div>
+                          <hr>
+                          <div class="text-content-boxed">
+                              <ul class="menu-vertical">
+                                  <li>
+                                      <%= link_to 'New Post', new_post_path %>
+                                  </li>
+                                  <li>
+                                      <%= link_to 'List Post', posts_path %>
+                                  </li>
+                                  <li>
+                                      <a href="#">List User</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">New Comment</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Send Newsletter</a>
+                                  </li>
+                                  <li>
+                                      <%= link_to 'Profile', edit_user_registration_path %>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-8 mt-2">
+                      <div class="boxed">
+                        <div class="text-title-boxed">
+                            <p>Update Profile</p>
+                        </div>
+                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+                          <div class="field form-group">
+                            <label>Email</label>
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class: "form-control" , :required => true %>
+                          </div>
+
+                          <div class="field form-group">
+                            <%= f.label :password %> <i></i><br />
+                            <%= f.password_field :password, autocomplete: "new-password" ,class: "form-control" , :required => true %>
+                            
+                          </div>
+
+                          <div class="field form-group">
+                            <%= f.label :password_confirmation %><br />
+                            <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class: "form-control" , :required => true %>
+                          </div>
+
+                          <div class="field form-group">
+                            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                            <%= f.password_field :current_password, autocomplete: "current-password" ,class: "form-control" , :required => true %>
+                          </div>
+
+                          <div class="actions">
+                            <%= f.submit "Update" , class: "btn btn-success btn-block" %>
+                          </div>
+                        <% end %>
+                      </div>
+                  </div>
+              </div>
+              <!--end of row-->
+          </div>
+      </div>
+  </div>
+</section>

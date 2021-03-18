@@ -1,0 +1,48 @@
+<section class="bg-login">
+  <div class="bg-overlay"></div>
+  <div class="home-center">
+      <div class="home-desc-center">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-md-7 col-lg-5 text-white login">
+                      <div class="text-center">
+                        <h2>Create a Blog17th account</h2>
+                        <p class="lead my-4">
+                            Get started with a 14 day free trial, No credit card required — cancel at any time.
+                        </p>
+                      </div>
+                      
+                      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                        <div class="field form-group">
+                          <%= f.label :email %><br />
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class: "form-control" , :required => true %>
+                        </div>
+
+                        <div class="field form-group">
+                          <%= f.label :password %>
+                          <% if @minimum_password_length %>
+                          <em>(<%= @minimum_password_length %> characters minimum)</em>
+                          <% end %><br />
+                          <%= f.password_field :password, autocomplete: "new-password" ,class: "form-control" , :required => true %>
+                        </div>
+
+                        <div class="field form-group">
+                          <%= f.label :password_confirmation %><br />
+                          <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class: "form-control" , :required => true %>
+                        </div>
+
+                        <div class="actions">
+                          <%= f.submit "CREATE ACCOUNT", class: "btn btn-success btn-block" %>
+                        </div>
+                      <% end %>
+
+                      <p class="mt-2 need">
+                        <%= render "devise/shared/links" %>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

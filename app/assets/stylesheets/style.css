@@ -1,0 +1,372 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap');
+body {
+  font-family: "Roboto", sans-serif;
+  color: #252525 !important;
+  font-size: 15px;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	border-radius: 20px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #343a40; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ECECEC;
+  position: relative;
+}
+
+.bg-overlay {
+  background-color: rgba(19, 20, 20, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-light {
+  background-color: #fafafa !important;
+}
+
+.btn {
+  padding: 7px 40px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  outline: #fff;
+}
+.btn:hover{
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn-toggler:focus {
+  box-shadow: none;
+  outline:0;
+}
+
+.navbar-custom {
+  padding: 20px 0px;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  margin-bottom: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-custom .navbar-nav li a {
+  line-height: 26px;
+  color: #06d19c;
+  font-size: 15px;
+  text-transform: capitalize;
+  transition: all 0.5s;
+  background-color: transparent !important;
+  padding: 6px 0;
+  margin: 0 10px;
+}
+
+.navbar-toggler {
+  outline: none;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: #252525;
+}
+
+.navbar-custom .navbar-nav li.active a,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active {
+  color: #06d19c !important;
+}
+
+.logo .logo-light {
+  display: inline-block;
+}
+
+.logo .logo-dark {
+  display: none;
+}
+
+.nav-sticky .logo .logo-dark {
+  display: inline-block;
+}
+
+.nav-sticky .logo .logo-light {
+  display: none;
+}
+
+/*---NAVBAR STICKY--*/
+.nav-sticky.navbar-custom {
+  margin-top: 0px;
+  padding: 20px 0px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 33px rgba(140, 140, 140, 0.1);
+}
+
+.nav-sticky.navbar-custom.sticky-dark {
+  background-color: #ffffff;
+}
+
+.nav-sticky .logo {
+  color: #252525 !important;
+}
+
+.nav-sticky .navbar-nav li a {
+  color: #868e96 !important;
+}
+
+.nav-sticky.navbar-custom .navbar-nav li a{
+  color: #06d19c !important;
+}
+
+.nav-sticky.navbar-custom .navbar-nav li a:hover{
+  color: #868e96 !important;
+}
+.nav-sticky.navbar-custom .navbar-toggles {
+  padding: .25rem .75rem;
+  border: 1px solid transparent;
+  outline: 0;
+}
+
+.nav-sticky .navbar-nav {
+  margin-top: 0px;
+}
+
+.bg-home {
+  background-image: url(../images/bg-2.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 100vh;
+}
+
+.bg-login {
+  background-image: url(../images/bg-login.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 100vh;
+}
+
+.bg-hire-me {
+  background-image: url(../images/bg-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 100vh;
+}
+
+.home-center {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.home-desc-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-title {
+  font-size: 48px;
+  color: #ffffff;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+
+.home-help p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #ffffff;
+  font-style: oblique;
+}
+
+
+.home-desc {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+.particels-slidero {
+  position: relative;
+  z-index: 1;
+}
+
+.blog-title a {
+  text-decoration: none !important;
+  outline: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: #252525;
+  font-style: oblique;
+}
+.blog-author{
+  font-size: 14px;
+  font-style: italic;
+}
+.blog-content {
+  color: rgb(116, 116, 116);
+}
+
+.bg-footer {
+  padding: 10px 0px;
+  background: #252525;
+}
+
+.footer-alt {
+  color: #868e96;
+}
+
+.contact-icon{
+  letter-spacing: 5px; 
+}
+.contact-icon a{
+  color: #fff;
+  font-size: 24px;
+}
+
+.login .need {
+  font-size: 13px;
+  height: 10px;
+}
+
+.not-found h1{
+  font-weight: 300;
+  font-size: 70px;
+}
+
+.not-found a{
+  font-weight: bold;
+  color: #fff;
+}
+
+.blog-title h1{
+  font-weight: 300;
+}
+
+.blog-title p{
+  color: #555;
+}
+
+.comments-form {
+  padding: 70px 0;
+}
+
+.boxed {
+  background-color: #fff;
+  border: #dbd9d9 1px solid;
+  border-radius: 10px;
+  padding: 60px 30px;
+}
+
+.text-title-boxed {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.text-content-boxed a{
+  color: #3577bd;
+  font-weight: 100;
+}
+.text-content-boxed ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text-content-boxed ul li{
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+@media (min-width: 200px) and (max-width: 992px) {
+  .navbar-custom {
+    margin-top: 0px;
+    padding: 15px 0px !important;
+    box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+    color: #ffffff !important;
+    background: #ffffff;
+  }
+  .navbar-custom .navbar-nav {
+    margin-top: 0px;
+  }
+  .navbar-custom .navbar-nav li.active {
+    border-color: transparent;
+  }
+  .navbar-custom .navbar-nav li a {
+    transition: all 0.4s;
+    color: #868e96 !important;
+    margin: 0px;
+  }
+  .navbar-custom > .container {
+    width: 90%;
+  }
+  .navbar-custom .navbar-nav li.active a,
+  .navbar-custom .navbar-nav li a:hover,
+  .navbar-custom .navbar-nav li a:active {
+    color: #06d19c !important;
+  }
+  .navbar-toggler {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #252525;
+  }
+  .home-title {
+    font-size: 38px;
+  }
+  .logo .logo-light {
+    display: none;
+  }
+  .logo .logo-dark {
+    display: inline-block;
+  }
+  .bg-home {
+    height: auto;
+    padding: 100px 0px 100px 0px;
+  }
+  .bg-login {
+    height: auto;
+    padding: 100px 0px 100px 0px;
+  }
+  .navbar-button {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+}

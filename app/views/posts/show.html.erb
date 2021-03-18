@@ -1,0 +1,47 @@
+<section class="bg-light pt-5">
+    <div class="home-center mt-5">
+        <div class="home-desc-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <%= image_tag "blog-ad.png", class: "img-fluid rounded mx-auto d-block", height: "35"%>
+                        <article class="my-4 pb-4">
+                            <div class="blog-title text-center">
+                                <h1 class="h2"><%= @post.Title %></h1>
+                                <p class="font-italic">Tác Giả: <%= @post.Author %></p>
+                            </div>
+                            <!--end article title-->
+                            <div class="blog-body">
+                                <%= @post.Content %>
+                            </div>
+                            <div class="font-sm text-muted mt-5 pt-5">Tag: <%= @post.Tag %></div>
+                        </article>
+                        <!--end item-->
+                    </div>
+                </div>
+                <div class="comments-form row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <h4>Leave a comment</h4>
+                        <form class="row">
+                            <div class="col-md-6 my-2">
+                                <label>Your Name:</label>
+                                <input type="text" name="Name" placeholder="Type name here" class="form-control"/>
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label>Email Address:</label>
+                                <input type="email" name="email" placeholder="hoangsang@blog17th.com" class="form-control"/>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <label>Comment:</label>
+                                <textarea rows="4" name="Message" placeholder="Message" class="form-control"></textarea>
+                            </div>
+                            <div class="col-md-12 my-2">
+                                <button class="btn btn-outline-primary text-dark" type="submit" class="form-control">Submit Comment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,78 @@
+
+
+<section class="bg-light pt-5">
+    <div class="home-center mt-3">
+        <div class="home-desc-center pt-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-4 mt-2">
+                        <div class="boxed">
+                            <div class="text-title-boxed text-center">
+                                <p>Interact with Blog17th</p>
+                            </div>
+                            <hr>
+                            <div class="text-content-boxed">
+                                <ul class="menu-vertical">
+                                    <li>
+                                        <%= link_to 'New Post', new_post_path %>
+                                    </li>
+                                    <li>
+                                        <%= link_to 'List Post', posts_path %>
+                                    </li>
+                                    <li>
+                                        <a href="#">List User</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">New Comment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Send Newsletter</a>
+                                    </li>
+                                    <li>
+                                        <%= link_to 'Profile', edit_user_registration_path %>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mt-2">
+                        <div class="boxed">
+                        <p id="notice"><%= notice %></p>
+                            <div class="text-title-boxed">
+                                <p>List Post</p>
+                            </div>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">#</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <% @posts.each do |post| %>
+                                <tr>
+                                  <th scope="row"><%= post.Title %></th>
+                                  <td>
+                                    <%= link_to post do %> 
+                                        <ion-icon name="play-outline"></ion-icon> 
+                                    <% end %> 
+                                    <%= link_to edit_post_path(post) do %> 
+                                        <ion-icon name="build-outline"></ion-icon> 
+                                    <% end %> 
+                                    <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %> 
+                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                    <% end %> 
+                                    
+                                  </td>
+                                </tr>
+                              <% end %>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

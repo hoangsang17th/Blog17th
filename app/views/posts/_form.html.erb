@@ -1,0 +1,38 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :Title %>
+    <%= form.text_field :Title, class:"form-control", placeholder:"Title" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Tag %>
+    <%= form.text_field :Tag, class:"form-control", placeholder:"Meta Tag" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Content %>
+    <%= form.text_area :Content, class:"form-control", placeholder:"Content for Blog", rows:15 %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Author %>
+    <%= form.number_field :Author, class:"form-control", placeholder:"ID Author" %>
+  </div>
+
+  <div class="actions form-group">
+    <%= form.submit "Post Article", class:"btn-outline-success form-control" %>
+  </div>
+
+<% end %>
