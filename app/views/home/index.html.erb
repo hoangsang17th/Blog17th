@@ -1,4 +1,4 @@
-<section class="bg-home" id="home">
+<section class="bg-home" id="particles">
     <div class="bg-overlay"></div>
     <div class="home-center">
         <div class="home-desc-center">
@@ -25,12 +25,7 @@
 
 <section class="bg-light" id="blog">
     <div class="container">
-    <%# <%= @postz.Author %>
         <% @posts.each do |post| %>
-        <% 
-        # @id_user = User.find(@posts.Author)
-        %>
-        
             <div class="row text-center section">
                 <div class="col-12">
                     <div class="blog-title">
@@ -38,10 +33,29 @@
                     </div>
                     <p class="blog-author"><%= post.Author %>/ <%= post.created_at %></p>
                     <p class="blog-content">
-                        <%= truncate(post.Content, length: 120) %>
+                        
+                        <%= truncate(simple_format(post.Content), length: 100, escape: false) %>
                     </p>
                 </div>
             </div>
         <% end %>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <%= link_to "Previous", root_path(page: @page - 1), class: "page-link" %>
+                        </li>
+                        <li class="page-item">
+                            <%= link_to @page, root_path(page: @page), class: "page-link" %>
+                        </li>
+                        <li class="page-item">
+                            <%= link_to "Next", root_path(page: @page + 1), class: "page-link" %>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,3 +1,4 @@
+<% @title = @post.Title %>
 <section class="bg-light pt-5">
     <div class="home-center mt-5">
         <div class="home-desc-center">
@@ -12,7 +13,7 @@
                             </div>
                             <!--end article title-->
                             <div class="blog-body">
-                                <%= @post.Content %>
+                                <%= simple_format(@post.Content)%>
                             </div>
                             <div class="font-sm text-muted mt-5 pt-5">Tag: <%= @post.Tag %></div>
                         </article>
@@ -20,10 +21,10 @@
                     </div>
                 </div>
                 <div class="comments-form row justify-content-center">
-                    <div class="col-md-10 col-lg-8">
+                    <div class="col-md-10 col-lg-8 col-12">
                         <h4>Leave a comment</h4>
-                        <form class="row">
-                            <div class="col-md-6 my-2">
+                        <form class="row form-group">
+                            <div class="col-md-6 my-2 col-12">
                                 <label>Your Name:</label>
                                 <input type="text" name="Name" placeholder="Type name here" class="form-control"/>
                             </div>

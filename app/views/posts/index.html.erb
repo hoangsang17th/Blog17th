@@ -68,6 +68,9 @@
                               <% end %>
                               </tbody>
                             </table>
+                            <%= link_to "Last Page", posts_path(page: @page - 1) %>
+                            <%= @page %>
+                            <%= link_to "Next Page", posts_path(page: @page + 1) %>
                         </div>
                     </div>
                 </div>

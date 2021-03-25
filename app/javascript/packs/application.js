@@ -12,15 +12,6 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-//=require app
-//=require bootstrap.bundle.min
-//=require jquery.easing.min
-//=require jquery.magnific-popup.min
-//=require jquery.min
-//=require owl.carousel.min
-//=require particles.app
-//=require particles
-//=require scrollspy.min
-//=require typed
-//=require jquery 
-//=require bootstrap-sprockets
+
+
+//= require particles

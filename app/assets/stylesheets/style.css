@@ -164,8 +164,10 @@ a {
   margin-top: 0px;
 }
 
-.bg-home {
-  background-image: url(../images/bg-2.jpg);
+.bg-home { 
+  background-image: url(/assets/bg-2.jpg);
+  /* background: image-url("bg-2.jpg");
+  background-image: image-url("bg-2.jpg"); */
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -173,7 +175,7 @@ a {
 }
 
 .bg-login {
-  background-image: url(../images/bg-login.jpg);
+  background-image: url(/assets/bg-login.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -181,7 +183,7 @@ a {
 }
 
 .bg-hire-me {
-  background-image: url(../images/bg-1.jpg);
+  background-image: url(/assets/bg-1.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;

@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
+  # include Pagy::Backend
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show ]
-
+  
+  
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @@per_page = 2
+    @page = params.fetch(:page,0).to_i
+    @posts = Post.offset(@page * @@per_page).limit(@@per_page)
   end
 
   # GET /posts/1 or /posts/1.json
