@@ -20,28 +20,35 @@
                         <!--end item-->
                     </div>
                 </div>
-                <div class="comments-form row justify-content-center">
+                <!--<div class="comments-form row justify-content-center">
                     <div class="col-md-10 col-lg-8 col-12">
                         <h4>Leave a comment</h4>
-                        <form class="row form-group">
+                        <%# <%= form_with(model: comment) do |form| %>
                             <div class="col-md-6 my-2 col-12">
-                                <label>Your Name:</label>
-                                <input type="text" name="Name" placeholder="Type name here" class="form-control"/>
+                                <div class="field form-group">
+                                    <label>Your Name:</label>
+                                    <%# <%= form.text_field :name, class:"form-control", placeholder:"Your Name" %> 
+                                </div>
                             </div>
-                            <div class="col-md-6 my-2">
-                                <label>Email Address:</label>
-                                <input type="email" name="email" placeholder="hoangsang@blog17th.com" class="form-control"/>
+                            <div class="col-md-6 my-2 col-12">
+                                <div class="field form-group">
+                                    <label>Email Address:</label>
+                                    <%# <%= form.text_field :email, class:"form-control", placeholder:"Email Address" %>
+                                </div>
                             </div>
-                            <div class="col-md-12 my-2">
-                                <label>Comment:</label>
-                                <textarea rows="4" name="Message" placeholder="Message" class="form-control"></textarea>
+                            <div class="col-md-6 my-2 col-12">
+                                <div class="field form-group">
+                                    <label>Comment:</label>
+                                    <%# <%= form.text_field :content, class:"form-control", placeholder:"Content Comment" %>
+                                </div>
                             </div>
-                            <div class="col-md-12 my-2">
-                                <button class="btn btn-outline-primary text-dark" type="submit" class="form-control">Submit Comment</button>
+                            <div class="actions form-group">
+                                <%# <%= form.submit "Submit Comment", class:"btn-outline-success form-control"  %>
                             </div>
-                        </form>
+
+                        <%# <% end %>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

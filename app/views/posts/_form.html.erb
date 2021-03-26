@@ -28,11 +28,11 @@
 
   <div class="field form-group">
     <%= form.label :Author, "ID Author" %>
-    <%= form.number_field :Author, class:"form-control", placeholder:"ID Author" %>
+    <%= form.number_field :Author, class:"form-control", placeholder:"ID Author", value: current_user.id , :disabled => true %>
   </div>
 
   <div class="actions form-group">
-    <%= form.submit "Post Article", class:"btn-outline-success form-control" %>
+    <%= form.submit "Post Article", class:"btn-outline-success form-control"%>
   </div>
 
 <% end %>
