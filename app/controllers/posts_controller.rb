@@ -6,9 +6,9 @@ class PostsController < ApplicationController
   
   # GET /posts or /posts.json
   def index
-    @@per_page = 2
+    @@per_page = 10
     @page = params.fetch(:page,0).to_i
-    @posts = Post.offset(@page * @@per_page).limit(@@per_page)
+    @posts = Post.order(created_at: :desc).offset(@page * @@per_page).limit(@@per_page)
   end
 
   # GET /posts/1 or /posts/1.json
